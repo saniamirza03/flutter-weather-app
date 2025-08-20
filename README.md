@@ -29,14 +29,18 @@ cd flutter-weather-app
 
 ### 2. Install Dependancies
 
-```flutter pub get```
+```bash
+flutter pub get
+```
 
 ### 3. Setup environment variables
 
 This project uses a .env file to store the API keys.
 - Copy the example file
 
-  ```cp .env.example .env```
+  ```bash
+  cp .env.example .env
+  ```
   
 - Open **.env** and add your own api key.
 
@@ -44,4 +48,6 @@ This project uses a .env file to store the API keys.
 
   ### 3. Run the app
 
-  ```flutter run```
+  ```bash
+  flutter run
+  ```
