@@ -116,12 +116,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
     final time1 = DateTime.now();
+    final season = time1.month;
     final hour = time1.hour;
 
     final String backgroundImage;
 
     if (hour >= 4 && hour < 7) {
-      backgroundImage = 'assets/sunrise.jpg';
+      if (season >=10 && season < 3) {
+        backgroundImage = 'assets/sunrise.jpg';
+      }
     }
     else if (hour >=7 && hour < 18) {
       backgroundImage = 'assets/day.jpg';
