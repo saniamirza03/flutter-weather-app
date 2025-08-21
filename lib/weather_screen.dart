@@ -118,22 +118,66 @@ class _WeatherScreenState extends State<WeatherScreen> {
     final time1 = DateTime.now();
     final season = time1.month;
     final hour = time1.hour;
+    final minute = time1.minute;
+    final timeInHours = hour + (minute / 60);
 
     final String backgroundImage;
 
-    if (hour >= 4 && hour < 7) {
-      if (season >=10 && season < 3) {
+    if (season >= 10 && season < 3) { //Winter
+      if (timeInHours>=5 && timeInHours <8) {
         backgroundImage = 'assets/sunrise.jpg';
       }
+      else if (timeInHours>=8 && timeInHours<17.5) {
+        backgroundImage = 'assets/day.jpg';
+      }
+      else if (timeInHours>=17.5 && timeInHours<18.3) {
+        backgroundImage = 'assets/sunset.jpg';
+      }
+      else {
+        backgroundImage = 'assets/night.jpg';
+      }
     }
-    else if (hour >=7 && hour < 18) {
-      backgroundImage = 'assets/day.jpg';
+    else if (season >= 3 && season < 5) { //Spring
+      if (timeInHours>=4.5 && timeInHours <7) {
+        backgroundImage = 'assets/sunrise.jpg';
+      }
+      else if (timeInHours>=7 && timeInHours<18) {
+        backgroundImage = 'assets/day.jpg';
+      }
+      else if (timeInHours>=18 && timeInHours<19) {
+        backgroundImage = 'assets/sunset.jpg';
+      }
+      else {
+        backgroundImage = 'assets/night.jpg';
+      }
     }
-    else if (hour >=18 && hour < 19) {
-      backgroundImage = 'assets/sunset.jpg';
+    else if (season >=5 && season < 8) { //Summer
+      if (timeInHours>=4 && timeInHours <5.5) {
+        backgroundImage = 'assets/sunrise.jpg';
+      }
+      else if (timeInHours>=5.5 && timeInHours<19.5) {
+        backgroundImage = 'assets/day.jpg';
+      }
+      else if (timeInHours>=19.5 && timeInHours<20) {
+        backgroundImage = 'assets/sunset.jpg';
+      }
+      else {
+        backgroundImage = 'assets/night.jpg';
+      }
     }
-    else {
-      backgroundImage = 'assets/night.jpg';
+    else { //Autumn
+      if (timeInHours>=4.5 && timeInHours <6) {
+        backgroundImage = 'assets/sunrise.jpg';
+      }
+      else if (timeInHours>=6 && timeInHours<19) {
+        backgroundImage = 'assets/day.jpg';
+      }
+      else if (timeInHours>=19 && timeInHours<19.7) {
+        backgroundImage = 'assets/sunset.jpg';
+      }
+      else {
+        backgroundImage = 'assets/night.jpg';
+      }
     }
 
     return Scaffold(
