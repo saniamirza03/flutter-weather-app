@@ -7,8 +7,9 @@ Supports fetching user location, daily forecasts, and more.
 <table>
   <tr>
     <td><img src="assets/screenshots/1.jpg" alt="Morning" width="300"/></td>
-    <td><img src="assets/screenshots/2.jpg" alt="Sunset" width="300"/></td>
+    <td><img src="assets/screenshots/2.jpg" alt="Sunrise" width="300"/></td>
     <td><img src="assets/screenshots/3.jpg" alt="Night" width="300"/></td>
+    <td><img src="assets/screenshots/4.jpg" alt="Sunset" width="300"/></td>
   </tr>
 </table>
 
